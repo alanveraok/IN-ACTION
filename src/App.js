@@ -1,15 +1,46 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
   return (
-    <div>
-      <h1 className="title">Hopfen Craft Beer</h1>
-      <p>let the beer be</p>
-      <button onClick={()=> alert("hola")}>Click me </button>
-    
-    <p></p>
-    </div>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          HOPFEN CRAFT BEER
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Inicio
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Nuestras Cervezas
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Venta de insumos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
