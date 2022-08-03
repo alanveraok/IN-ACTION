@@ -1,50 +1,49 @@
-import React from "react";
-import "./NavBar.css"
+import "./NavBar.css";
+import CartWidget from "./CartWidget/CartWidget";
+import "./NavBar.css";
 
 function NavBar() {
   return (
-    <body>
-      <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              HOPFEN CRAFT BEER
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    Inicio
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Nuestras Cervezas
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Venta de insumos
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
-    
-    </body>
+    <nav className="navbar navbar-expand-lg bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          HOPFEN CRAFT BEER
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
+                Inicio
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Nuestras Cervezas
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Venta de insumos
+              </a>
+            </li>
+            <li className="navItem">
+              <CartWidget />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 

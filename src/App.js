@@ -1,8 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Button } from "bootstrap";
+// import { Button } from "bootstrap";
 import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+
+
+
 
 function App() {
   const titles = {
@@ -13,18 +17,23 @@ function App() {
   };
 
   return (
-    <body>
-      <nav>
-        <NavBar />
-      </nav>
+     
+    <div className="App">
+    <NavBar />
+
+        <main>    
+
       <div className="banner">
         <h1 style={titles}>HOPFEN CRAFT BEER</h1>
       </div>
 
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status"></div>
+      <div>
+      <ItemListContainer />
       </div>
-    </body>
+      </main>
+</div>
+   
+ 
   );
 }
 
