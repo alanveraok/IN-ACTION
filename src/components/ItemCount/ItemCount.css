@@ -1,0 +1,32 @@
+.buttonAdd {
+  background-color: green;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  border: green;
+  border-radius: 4px;
+}
+
+.buttonSubstract {
+  background-color: red;
+  padding: 6px;
+  text-align: center;
+  font-size: 16px;
+  border: red;
+  border-radius: 4px;
+}
+
+.cartButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.addToCart {
+  border: none;
+  background-color: lightblue;
+  border-radius: 18px;
+  padding: 4px;
+  margin-top: 15px;
+}

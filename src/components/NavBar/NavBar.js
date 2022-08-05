@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import CartWidget from "./CartWidget/CartWidget";
+import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
 function NavBar() {
@@ -7,7 +7,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          HOPFEN CRAFT BEER
+          IN-ACTION
         </a>
         <button
           className="navbar-toggler"
@@ -24,17 +24,17 @@ function NavBar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                Inicio
+                INICIO
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Nuestras Cervezas
+                FIGURAS Y COLLECIONABLES
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Venta de insumos
+                NOVEDADES
               </a>
             </li>
             <li className="navItem">
