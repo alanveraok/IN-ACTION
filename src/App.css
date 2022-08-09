@@ -40,3 +40,17 @@
 .title {
   color: red;
 }
+
+.banner {
+  background-color: black;
+  color: white;
+}
+
+.banner h1,
+h2 {
+  font-style: italic;
+}
+
+.span-in {
+  color: yellow ;
+}

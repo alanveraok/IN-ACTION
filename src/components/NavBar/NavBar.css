@@ -1,6 +1,23 @@
+.conntainer-fluid {
+  color: white;
+}
+
 .navItem {
   font-size: 20px;
   text-align: center;
   padding: 4px;
   margin-left: 10px;
+  color: white;
+}
+
+/* .navbar-brand {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+} */
+
+.navbar-brand span {
+  color: yellow;
+  background-color: black;
 }

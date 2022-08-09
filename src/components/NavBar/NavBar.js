@@ -7,7 +7,7 @@ function NavBar() {
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          IN-ACTION
+          <span>IN-</span>ACTION
         </a>
         <button
           className="navbar-toggler"

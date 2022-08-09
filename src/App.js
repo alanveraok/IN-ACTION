@@ -8,38 +8,33 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 import ClickCount from "./components/ItemCount/ItemCount";
 
-
-
+import StarWarsImg from "./Images/StarWarsImg.jpg";
 
 function App() {
   const titles = {
     textAlign: "center",
-    marginTop: "20px",
     marginBottom: "50px",
     fontSize: "60px",
   };
 
   return (
-     
     <div className="App">
-    <NavBar />
+      <NavBar />
 
-        <main>    
+      <main>
+        <div className="banner">
+          <h1 style={titles}>
+            {" "}
+            <span className="span-in">IN- </span>ACTION
+          </h1>
+          <h2>FIGURAS DE ACCIÓN Y COLLECIONABLES</h2>
+        </div>
 
-      <div className="banner">
-        <h1 style={titles}>IN-ACTION</h1>
-        <h2>FIGURAS DE ACCIÓN Y COLLECIONABLES</h2>
-      </div>
-
-      <div>
-      <ItemListContainer />
-      </div>
+        <div>
+          <ItemListContainer />
+        </div>
       </main>
-      
-
-</div>
-   
- 
+    </div>
   );
 }
 
