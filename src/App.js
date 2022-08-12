@@ -5,10 +5,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 // import ClickCount from "./components/ClickCount/ClickCount";
-
 import ClickCount from "./components/ItemCount/ItemCount";
 
-import StarWarsImg from "./Images/StarWarsImg.jpg";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   const titles = {
@@ -31,7 +30,8 @@ function App() {
         </div>
 
         <div>
-          <ItemListContainer />
+          {/* <ItemListContainer /> */}
+          <ItemDetailContainer/>
         </div>
       </main>
     </div>

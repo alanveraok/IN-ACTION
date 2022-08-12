@@ -12,6 +12,7 @@ function Item({ title, price, img, stock }) {
         <h2>{title}</h2>
         <h3>$ {price}</h3>
         <p>STOCK: {stock}</p>
+        <button className="verMas">Ver más</button>
         <ItemCount initial={1} stock={10} />
       </div>
     </div>

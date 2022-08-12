@@ -5,6 +5,10 @@ const dataItems = [
     price: 18999,
     img: "https://m.media-amazon.com/images/I/71GAPlnpr5L._AC_SL1500_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
   },
 
   {

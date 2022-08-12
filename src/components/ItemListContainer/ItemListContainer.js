@@ -7,7 +7,7 @@ import ItemList from "../ItemList/ItemList";
 
 function getProductos() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(dataItems), 1000);
+    setTimeout(() => resolve(dataItems), 1500);
   });
 }
 

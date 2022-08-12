@@ -30,3 +30,12 @@
 .card-detail {
   padding: 12px 8px;
 }
+
+.verMas {
+  border: none;
+  background-color: lightblue;
+  border-radius: 18px;
+  padding: 4px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
