@@ -3,11 +3,14 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 // import { Button } from "bootstrap";
 import NavBar from "./components/NavBar/NavBar";
+
+import Banner from "./components/Banner/Banner";
+
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import ClickCount from "./components/ClickCount/ClickCount";
-import ClickCount from "./components/ItemCount/ItemCount";
 
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const titles = {
@@ -18,24 +21,22 @@ function App() {
 
   return (
     <div className="App">
+
+      <main> 
+            <BrowserRouter>           
       <NavBar />
-
-      <main>
-        <div className="banner">
-          <h1 style={titles}>
-            {" "}
-            <span className="span-in">IN- </span>ACTION
-          </h1>
-          <h2>FIGURAS DE ACCIÓN Y COLLECIONABLES</h2>
-        </div>
-
-        <div>
-          {/* <ItemListContainer /> */}
-          <ItemDetailContainer/>
-        </div>
+      <Banner/>      
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/detalle/:id" element={<ItemListContainer />} />
+              <Route
+                path="/category/:idCategory" element={<ItemDetailContainer />}
+              />
+            </Routes>
+          </BrowserRouter>
+        
       </main>
     </div>
   );
 }
-
 export default App;

@@ -7,6 +7,7 @@ function ItemList({ data }) {
     return (
       <Item
         key={singleProduct.id}
+        id={singleProduct.id}
         title={singleProduct.title}
         img={singleProduct.img}
         price={singleProduct.price}

@@ -4,6 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import React, { useEffect, useState } from "react";
 import dataItems from "../Data/Data";
 import ItemList from "../ItemList/ItemList";
+import { useParams } from "react-router-dom";
 
 function getProductos() {
   return new Promise((resolve) => {
@@ -13,10 +14,20 @@ function getProductos() {
 
 function ItemListContainer({ greeting = "NUESTROS PRODUCTOS" }) {
   const [data, setData] = useState([]);
+  const idCategory = useParams().idCategory
 
   useEffect(() => {
-    getProductos().then((respuesta) => setData(respuesta));
-  }, []);
+    getProductos().then(respuesta =>{
+      let itemsFilter = dataItems.filter((element) => element.category === idCategory)
+      if(idCategory===undefined){
+        setData(respuesta)
+      }
+      else {
+        setData(itemsFilter)
+      }
+        
+      })  
+  },   [idCategory]);
 
   return (
     <div className="container">
