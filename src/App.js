@@ -10,31 +10,26 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
+import React from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  const titles = {
-    textAlign: "center",
-    marginBottom: "50px",
-    fontSize: "60px",
-  };
-
   return (
     <div className="App">
-
-      <main> 
-            <BrowserRouter>           
-      <NavBar />
-      <Banner/>      
-            <Routes>
-              <Route path="/" element={<ItemListContainer />} />
-              <Route path="/detalle/:id" element={<ItemListContainer />} />
-              <Route
-                path="/category/:idCategory" element={<ItemDetailContainer />}
-              />
-            </Routes>
-          </BrowserRouter>
-        
+      <main>
+        <BrowserRouter>
+          <NavBar />
+          <Banner />
+          <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
+            <Route
+              path="/category/:idCategory"
+              element={<ItemListContainer />}
+            />
+          </Routes>
+        </BrowserRouter>
       </main>
     </div>
   );

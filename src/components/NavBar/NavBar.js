@@ -3,6 +3,7 @@ import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 
+import * as React from "react";
 import { Link } from "react-router-dom"
 
 
@@ -28,9 +29,9 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" >
+              <Link to={"/"} className="nav-link active" aria-current="page" >
                 INICIO
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
               <Link to={`category/star-wars`} className="nav-link" >

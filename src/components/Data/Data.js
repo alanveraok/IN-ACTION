@@ -18,6 +18,10 @@ const dataItems = [
     price: 14999,
     img: "https://m.media-amazon.com/images/I/51XfuVGWF-L._AC_SL1000_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "star-wars",
   },
 
@@ -27,15 +31,23 @@ const dataItems = [
     price: 23999,
     img: "https://m.media-amazon.com/images/I/71B2TkfzosL._AC_SL1500_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "star-wars",
   },
 
   {
     id: 4,
-    title: "Mando",
+    title: "Mandalorian",
     price: 25999,
     img: "https://m.media-amazon.com/images/I/81dSQ0tVdML._AC_SL1500_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "star-wars",
   },
 
@@ -45,6 +57,10 @@ const dataItems = [
     price: 29999,
     img: "https://m.media-amazon.com/images/I/81bhQsQ8aZL._AC_SL1500_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "star-wars",
   },
 
@@ -54,6 +70,10 @@ const dataItems = [
     price: 39999,
     img: "https://m.media-amazon.com/images/I/71rrQs5yWHL._AC_SL1500_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "di-ci",
   },
 
@@ -63,6 +83,10 @@ const dataItems = [
     price: 14999,
     img: "https://m.media-amazon.com/images/I/71j6dbQtB+L._AC_SX679_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "di-ci",
   },
 
@@ -72,6 +96,10 @@ const dataItems = [
     price: 12499,
     img: "https://m.media-amazon.com/images/I/71CF4WfI3nL._AC_SX679_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "di-ci",
   },
 
@@ -81,32 +109,48 @@ const dataItems = [
     price: 22499,
     img: "https://m.media-amazon.com/images/I/612UZVwwyOL._AC_SY879_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "marvel",
   },
 
   {
     id: 10,
     title: "Thor",
-    price: 12499,
+    price: 23499,
     img: "https://m.media-amazon.com/images/I/81ec9J+H0XL._AC_SY879_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "marvel",
   },
   {
     id: 11,
     title: "Deadpool",
-    price: 12499,
+    price: 11999,
     img: "https://m.media-amazon.com/images/I/71Pe2CSjHYL._AC_SY879_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "marvel",
   },
 
   {
     id: 12,
     title: "Captain marvel",
-    price: 12499,
+    price: 22999,
     img: "https://m.media-amazon.com/images/I/71-2Bzcdq1L._AC_SY879_.jpg",
     stock: 10,
+    size: "16 centímetros",
+    weight: "300 gramos",
+    description:
+      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
     category: "marvel",
   },
 ];

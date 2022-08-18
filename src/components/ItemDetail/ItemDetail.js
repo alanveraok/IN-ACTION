@@ -3,6 +3,7 @@ import "./ItemDetail.css";
 
 import ItemCount from "../ItemCount/ItemCount";
 
+
 function ItemDetail({ data }) {
   return (
     <>

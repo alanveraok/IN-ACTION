@@ -19,7 +19,7 @@ function ItemListContainer({ greeting = "NUESTROS PRODUCTOS" }) {
   useEffect(() => {
     getProductos().then(respuesta =>{
       let itemsFilter = dataItems.filter((element) => element.category === idCategory)
-      if(idCategory===undefined){
+      if(idCategory === undefined){
         setData(respuesta)
       }
       else {

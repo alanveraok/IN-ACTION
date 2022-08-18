@@ -1,32 +1,44 @@
 import React, { useEffect, useState } from "react";
 import dataItems from "../Data/Data";
+
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useParams } from "react-router-dom";
 
-function getOneItem() {
-  const idURL = useParams().id;
-  return new Promise((resolve) => {
-    let itemRequested = dataItems.find((element) => element.id === idURL);
-    resolve(itemRequested);
-    setTimeout(() => {
-      resolve(dataItems[id]);
-    }, 2500);
-  });
-}
+// function getOneItem(SingleProductId) {
+//   return new Promise((resolve) => {
+//     let itemRequested = dataItems.find((element) => element.id === idURL);
+//     setTimeout(() => {
+//       resolve(itemRequested);
+//     }, 2500);
+//   });
+// }
 
-function ItemDetailContainer() {
+function ItemDetailContainer(SingleProductId) {
   const [data, setData] = useState({});
+  const idURL = useParams().id;
+  function getOneItem(SingleProductId) {
+    return new Promise((resolve) => {
+      let itemRequested = dataItems.find(
+        (element) => element.id === Number(idURL)
+      );
+      setTimeout(() => {
+        resolve(itemRequested);
+      }, 2500);
+    });
+  }
   useEffect(() => {
     getOneItem().then((product) => {
-      setData(product[id]);
+      setData(product);
     });
   }, []);
-  return (
-    <div>
-      <ItemDetail data={data} />
-    </div>
-  );
+
+  return(
+
+  <>
+    <ItemDetail data={data} />
+  </>
+  )
 }
 
 export default ItemDetailContainer;
