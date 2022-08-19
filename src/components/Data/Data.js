@@ -143,7 +143,7 @@ const dataItems = [
 
   {
     id: 12,
-    title: "Captain marvel",
+    title: "Captain Marvel",
     price: 22999,
     img: "https://m.media-amazon.com/images/I/71-2Bzcdq1L._AC_SY879_.jpg",
     stock: 10,
