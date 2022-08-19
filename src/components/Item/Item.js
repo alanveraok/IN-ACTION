@@ -15,7 +15,7 @@ function Item({ title, price, img, stock, id }) {
         <h3>$ {price}</h3>
         <p>STOCK: {stock}</p>
         <Link className="verMas" to={`/detalle/${id}`}> Ver más</Link>
-        <ItemCount initial={1} stock={10} />
+        {/* <ItemCount initial={1} stock={10} /> */}
       </div>
     </div>
   );

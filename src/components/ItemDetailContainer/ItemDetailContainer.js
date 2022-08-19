@@ -20,7 +20,7 @@ function ItemDetailContainer(SingleProductId) {
   function getOneItem(SingleProductId) {
     return new Promise((resolve) => {
       let itemRequested = dataItems.find(
-        (element) => element.id === Number(idURL)
+        (element) => element.id == Number(idURL)
       );
       setTimeout(() => {
         resolve(itemRequested);

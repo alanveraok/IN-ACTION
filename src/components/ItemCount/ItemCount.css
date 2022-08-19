@@ -26,7 +26,8 @@
 .addToCart {
   border: none;
   background-color: lightblue;
-  border-radius: 18px;
+  border-radius: 8px;
   padding: 4px;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
