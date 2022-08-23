@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 // import { Button } from "bootstrap";
@@ -14,21 +13,27 @@ import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { CartProvider } from "./components/store/cartContext"
+
+
+
 function App() {
   return (
     <div className="App">
       <main>
         <BrowserRouter>
-          <NavBar />
-          <Banner />
-          <Routes>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route path="/detalle/:id" element={<ItemDetailContainer/>} />
-            <Route
-              path="/category/:idCategory"
-              element={<ItemListContainer />}
-            />
-          </Routes>
+          <CartProvider>
+            <NavBar />
+            <Banner />
+            <Routes>
+              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/detalle/:id" element={<ItemDetailContainer />} />
+              <Route
+                path="/category/:idCategory"
+                element={<ItemListContainer />}
+              />
+            </Routes>
+          </CartProvider>
         </BrowserRouter>
       </main>
     </div>

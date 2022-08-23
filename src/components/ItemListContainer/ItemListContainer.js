@@ -12,22 +12,22 @@ function getProductos() {
   });
 }
 
-function ItemListContainer({ greeting = "NUESTROS PRODUCTOS" }) {
+function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
   const [data, setData] = useState([]);
-  const idCategory = useParams().idCategory
+  const idCategory = useParams().idCategory;
 
   useEffect(() => {
-    getProductos().then(respuesta =>{
-      let itemsFilter = dataItems.filter((element) => element.category === idCategory)
-      if(idCategory === undefined){
-        setData(respuesta)
+    getProductos().then((respuesta) => {
+      let itemsFilter = dataItems.filter(
+        (element) => element.category === idCategory
+      );
+      if (idCategory === undefined) {
+        setData(respuesta);
+      } else {
+        setData(itemsFilter);
       }
-      else {
-        setData(itemsFilter)
-      }
-        
-      })  
-  },   [idCategory]);
+    });
+  }, [idCategory]);
 
   return (
     <div className="container">

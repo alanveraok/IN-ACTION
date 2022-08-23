@@ -49,6 +49,12 @@ function NavBar() {
                 MARVEL
               </Link>
             </li>
+
+            <li className="nav-item">
+              <Link to={`category/twd`} className="nav-link" >
+                NOVEDADES
+              </Link>
+            </li>
             <li className="navItem">
               <CartWidget />
             </li>
