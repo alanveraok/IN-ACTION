@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import dataItems from "../Data/Data";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { Ring } from "@uiball/loaders";
 
 function getProductos() {
   return new Promise((resolve) => {
@@ -28,6 +29,14 @@ function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
       }
     });
   }, [idCategory]);
+
+  if (data.length === 0) {
+    return (
+      <div className="container">
+        <Ring size={90} speed={1.6} color="yellow"/>
+      </div>
+    );
+  }
 
   return (
     <div className="container">

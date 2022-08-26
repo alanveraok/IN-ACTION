@@ -2,7 +2,7 @@ const dataItems = [
   {
     id: 1,
     title: "Boba Fett",
-    price: 18999,
+    price: 19000,
     img: "https://m.media-amazon.com/images/I/71GAPlnpr5L._AC_SL1500_.jpg",
     stock: 10,
     size: "16 centímetros",

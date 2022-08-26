@@ -13,9 +13,9 @@ import React from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { CartProvider } from "./components/store/cartContext"
+import { CartProvider } from "./store/cartContext";
 
-
+import Cart from "./components/Cart/Cart";
 
 function App() {
   return (
@@ -32,6 +32,7 @@ function App() {
                 path="/category/:idCategory"
                 element={<ItemListContainer />}
               />
+              <Route path="/cart" element={<Cart />} />
             </Routes>
           </CartProvider>
         </BrowserRouter>
