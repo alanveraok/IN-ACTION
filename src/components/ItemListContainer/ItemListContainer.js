@@ -7,33 +7,58 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { Ring } from "@uiball/loaders";
 
-function getProductos() {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve(dataItems), 1500);
-  });
-}
+import firestoreDB from "../../services/firebase";
+
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
   const [data, setData] = useState([]);
   const idCategory = useParams().idCategory;
 
-  useEffect(() => {
-    getProductos().then((respuesta) => {
-      let itemsFilter = dataItems.filter(
-        (element) => element.category === idCategory
-      );
-      if (idCategory === undefined) {
-        setData(respuesta);
-      } else {
-        setData(itemsFilter);
-      }
+  function getProductos() {
+    return new Promise((resolve) => {
+      const figurasCollection = collection(firestoreDB, "figuras");
+      getDocs(figurasCollection).then((snapshot) => {
+        const docsData = snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        });
+        resolve(docsData);
+      });
     });
-  }, [idCategory]);
+  }
+
+  function getProductsCategory(idCategory) {
+    return new Promise((resolve) => {
+      const figurasCollectionRef = collection(firestoreDB, "figuras");
+      const q = query(
+        figurasCollectionRef,
+        where("category", "==", idCategory)
+      );
+      getDocs(q).then((snapshot) => {
+        const docsData = snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        });
+        resolve(docsData);
+      });
+    });
+  }
+
+  useEffect(() => {
+    if (getProductsCategory === undefined)
+      getProductsCategory().then((resolve) => {
+        setData(resolve);
+      });
+    else {
+      getProductos().then((resolve) => {
+        setData(resolve);
+      });
+    }
+  }, []);
 
   if (data.length === 0) {
     return (
       <div className="container">
-        <Ring size={90} speed={1.6} color="yellow"/>
+        <Ring size={90} speed={1.6} color="yellow" />
       </div>
     );
   }

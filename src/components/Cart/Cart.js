@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,12 @@ function Cart() {
   const { cart, total, quantity } = useContext(cartContext);
 
   if (quantity === 0) {
-    return <Link to="/">NO HAY PRODUCTOS EN EL CARRITO, VER PRODUCTOS.</Link>;
+    return (
+      <Link to="/">
+        NO HAY PRODUCTOS EN EL CARRITO, CLICK AQUÍ PARA VER NUESTRAS FIGURAS DE
+        ACCIÓN.
+      </Link>
+    );
   }
 
   return (
