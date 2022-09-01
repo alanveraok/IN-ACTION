@@ -5,9 +5,9 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useParams } from "react-router-dom";
 
-import firestoreDB  from "../../services/firebase";
+import firestoreDB from "../../services/firebase";
 
-import { collection, doc, getDoc } from "firebase/firestore"
+import { collection, doc, getDoc } from "firebase/firestore";
 
 // function getOneItem(SingleProductId) {
 //   return new Promise((resolve) => {
@@ -21,31 +21,27 @@ import { collection, doc, getDoc } from "firebase/firestore"
 function ItemDetailContainer() {
   const [data, setData] = useState({});
   const idURL = useParams().id;
-  useEffect(()=>{
-    function getOneItem(id){
-      return new Promise ((resolve)=>{
-        const figurasCollection = collection(firestoreDB, "figuras")
-        const docRef = doc(figurasCollection, id)
-        getDoc(docRef).then (snapshot => {
-          resolve(
-            {...snapshot.data(), id: snapshot.id}
-          )
-        })
-      })
+  useEffect(() => {
+    function getOneItem(id) {
+      return new Promise((resolve) => {
+        const figurasCollection = collection(firestoreDB, "figuras");
+        const docRef = doc(figurasCollection, id);
+        getDoc(docRef).then((snapshot) => {
+          resolve({ ...snapshot.data(), id: snapshot.id });
+        });
+      });
     }
-  
- getOneItem(idURL).then (product=>{
-  setData(product)
- })
-}, [idURL])
- 
 
-  return(
+    getOneItem(idURL).then((product) => {
+      setData(product);
+    });
+  }, [idURL]);
 
-  <>
-    <ItemDetail data={data} />
-  </>
-  )
+  return (
+    <>
+      <ItemDetail data={data} />
+    </>
+  );
 }
 
 export default ItemDetailContainer;

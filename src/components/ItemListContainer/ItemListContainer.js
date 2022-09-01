@@ -53,7 +53,7 @@ function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
         setData(resolve);
       });
     }
-  }, []);
+  }, [idCategory]);
 
   if (data.length === 0) {
     return (
