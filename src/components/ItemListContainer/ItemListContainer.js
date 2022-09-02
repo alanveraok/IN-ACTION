@@ -9,60 +9,41 @@ import { Ring } from "@uiball/loaders";
 
 import firestoreDB from "../../services/firebase";
 
-import { collection, getDocs, query, where } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  query,
+  where,
+  getFirestore,
+} from "firebase/firestore";
 
 function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
   const [data, setData] = useState([]);
   const idCategory = useParams().idCategory;
 
-  function getProductos() {
-    return new Promise((resolve) => {
-      const figurasCollection = collection(firestoreDB, "figuras");
-      getDocs(figurasCollection).then((snapshot) => {
-        const docsData = snapshot.docs.map((doc) => {
-          return { ...doc.data(), id: doc.id };
-        });
-        resolve(docsData);
-      });
-    });
-  }
-
-  function getProductsCategory(idCategory) {
-    return new Promise((resolve) => {
-      const figurasCollectionRef = collection(firestoreDB, "figuras");
-      const q = query(
-        figurasCollectionRef,
+  useEffect(() => {
+    const queryDB = getFirestore();
+    const queryCollection = collection(queryDB, "figuras");
+    if (idCategory) {
+      const queryFilter = query(
+        queryCollection,
         where("category", "==", idCategory)
       );
-      getDocs(q).then((snapshot) => {
-        const docsData = snapshot.docs.map((doc) => {
-          return { ...doc.data(), id: doc.id };
-        });
-        resolve(docsData);
-      });
-    });
-  }
-
-  useEffect(() => {
-    if (getProductsCategory === undefined)
-      getProductsCategory().then((resolve) => {
-        setData(resolve);
-      });
-    else {
-      getProductos().then((resolve) => {
-        setData(resolve);
-      });
+      getDocs(queryFilter).then((res) =>
+        setData(
+          res.docs.map((product) => ({ ...product.data(), id: product.id }))
+        )
+      );
+    } else {
+      getDocs(queryCollection).then((res) =>
+        setData(
+          res.docs.map((product) => ({ ...product.data(), id: product.id }))
+        )
+      );
     }
   }, [idCategory]);
 
-  if (data.length === 0) {
-    return (
-      <div className="container">
-        <Ring size={90} speed={1.6} color="yellow" />
-      </div>
-    );
-  }
-
+  console.log(data);
   return (
     <div className="container">
       <h2>{greeting}</h2>

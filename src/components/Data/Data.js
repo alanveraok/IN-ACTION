@@ -154,38 +154,17 @@ const dataItems = [
     category: "marvel",
   },
 
-
   {
     id: 13,
     title: "Daryl Dixon",
     price: 28999,
-    img:"https://m.media-amazon.com/images/I/61KzeMo5oTL._AC_SX679_.jpg",
+    img: "https://m.media-amazon.com/images/I/61KzeMo5oTL._AC_SX679_.jpg",
     stock: 10,
     size: "19 centímetros",
     weight: "250 gramos",
-    description:"Figura de acción de uno de los personajes principales de esta serie, Daryl Dixon. Incluye bayesta con sus respectivas flechas y poncho removible",
+    description:
+      "Figura de acción de uno de los personajes principales de esta serie, Daryl Dixon. Incluye bayesta con sus respectivas flechas y poncho removible",
     category: "twd",
-
-  },
-
-  {
-    id: 14
-  },
-
-  {
-    id: 15
-  },
-
-  {
-    id: 16
-  },
-
-  {
-    id: 17
-  },
-
-  {
-    id: 18
   },
 ];
 

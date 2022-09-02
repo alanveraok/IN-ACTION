@@ -5,36 +5,16 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 import { useParams } from "react-router-dom";
 
-import firestoreDB from "../../services/firebase";
-
-import { collection, doc, getDoc } from "firebase/firestore";
-
-// function getOneItem(SingleProductId) {
-//   return new Promise((resolve) => {
-//     let itemRequested = dataItems.find((element) => element.id === idURL);
-//     setTimeout(() => {
-//       resolve(itemRequested);
-//     }, 2500);
-//   });
-// }
+import { collection, doc, getDoc, getFirestore } from "firebase/firestore";
 
 function ItemDetailContainer() {
   const [data, setData] = useState({});
   const idURL = useParams().id;
-  useEffect(() => {
-    function getOneItem(id) {
-      return new Promise((resolve) => {
-        const figurasCollection = collection(firestoreDB, "figuras");
-        const docRef = doc(figurasCollection, id);
-        getDoc(docRef).then((snapshot) => {
-          resolve({ ...snapshot.data(), id: snapshot.id });
-        });
-      });
-    }
 
-    getOneItem(idURL).then((product) => {
-      setData(product);
-    });
+  useEffect(() => {
+    const queryDB = getFirestore();
+    const queryDoc = doc(queryDB, "figuras", idURL);
+    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
   }, [idURL]);
 
   return (

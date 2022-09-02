@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import { useContext } from "react";
 
 import { Link } from "react-router-dom";
@@ -5,6 +6,7 @@ import { Link } from "react-router-dom";
 import { cartContext } from "../../store/cartContext";
 
 import CartItem from "../CartItem/CartItem";
+
 
 function Cart() {
   const { cart, total, quantity } = useContext(cartContext);
@@ -25,8 +27,12 @@ function Cart() {
       })}
 
       <p>TOTAL:{total}</p>
+
+
     </div>
+    
   );
+
 }
 
 export default Cart;

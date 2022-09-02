@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function ItemDetail({ data }) {
   const { addToCart, removeItem, clearCart } = useContext(cartContext);
   const [countItem, setCountItem] = useState(0);
-
+  console.log(data);
   function handleAdd(counter) {
     addToCart(data, counter);
     setCountItem(counter);

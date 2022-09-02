@@ -17,9 +17,14 @@ import { CartProvider } from "./store/cartContext";
 
 import Cart from "./components/Cart/Cart";
 
+import firestoreDB from "./services/firebase";
+
+import { saveProductsToFirebase } from "./services/firebase";
+
 function App() {
   return (
     <div className="App">
+      <button onClick={saveProductsToFirebase}>ADD PRODS</button>
       <main>
         <BrowserRouter>
           <CartProvider>
