@@ -17,14 +17,16 @@ import { CartProvider } from "./store/cartContext";
 
 import Cart from "./components/Cart/Cart";
 
-import firestoreDB from "./services/firebase";
+import Form from "./components/Form/Form";
 
-import { saveProductsToFirebase } from "./services/firebase";
+import Footer from "./components/Footer/Footer";
+
+
 
 function App() {
   return (
     <div className="App">
-      <button onClick={saveProductsToFirebase}>ADD PRODS</button>
+   
       <main>
         <BrowserRouter>
           <CartProvider>
@@ -38,7 +40,9 @@ function App() {
                 element={<ItemListContainer />}
               />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/Form" element={<Form />} />
             </Routes>
+            <Footer/>             
           </CartProvider>
         </BrowserRouter>
       </main>

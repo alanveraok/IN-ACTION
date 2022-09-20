@@ -1,0 +1,10 @@
+.inCart p {
+  margin-top: 10px;
+  font-size: 40px;
+}
+.to-cart-button {
+  background-color: yellow;
+  border: none;
+  margin-right: 10px;
+  font-size: 25px;
+}

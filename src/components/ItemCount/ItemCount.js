@@ -37,6 +37,6 @@ function ItemCount(props) {
   );
 }
 
-/*ver onAdd*/
+
 
 export default ItemCount;

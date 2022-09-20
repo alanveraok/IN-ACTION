@@ -25,7 +25,8 @@
 
 .addToCartt {
   border: none;
-  background-color: lightblue;
+  background-color: yellow;
+  color: black;
   border-radius: 8px;
   padding: 4px;
   margin-top: 15px;

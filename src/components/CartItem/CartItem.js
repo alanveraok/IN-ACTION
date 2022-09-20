@@ -7,6 +7,8 @@ import { useContext } from "react";
 
 import { cartContext } from "../../store/cartContext";
 
+import { Link } from "react-router-dom";
+
 function CartItem({ data }) {
   const { addToCart, removeItem, clearCart } = useContext(cartContext);
   const [countItem, setCountItem] = useState(0);
@@ -25,6 +27,7 @@ function CartItem({ data }) {
   }
 
   return (
+    <div className="in-cart">
     <div className="card">
       <div className="card-img">
         <img src={data.img} alt="imagen" />
@@ -32,19 +35,17 @@ function CartItem({ data }) {
       <div className="details">
         <h2>{data.title}</h2>
         <h3>$ {data.price}</h3>
-        <p className="description">{data.description}</p>
         <p>STOCK: {data.stock}</p>
-        <p>PESO: {data.weight}</p>
-        <p>ALTURA: {data.size}</p>
         <p>CANTIDAD: {data.counter}</p>
 
         <button className="btn-primary" onClick={removeItemCart}>
-          Eliminar carrito
+          ELIMINAR CARRITO
         </button>
         <button className="btn-primary" onClick={clearItemCart}>
-          Eliminar todo
+          ELIMINTAR TODO
         </button>
       </div>
+    </div>
     </div>
   );
 }

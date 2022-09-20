@@ -1,49 +1,57 @@
-.card-img {
-  width: 280px;
-  height: 260px;
-  object-fit: cover;
-}
-.card-img img {
-  width: 100%;
-  height: 90%;
-  object-fit: contain;
-}
+.card-detail-container {
 
-.card {
-  margin: 10px 15px;
-  min-height: 600px;
-  width: 280px;
-  height: 100%;
-  border-radius: 4px;
+  color: #fff;
+  gap: 30px;
+  text-align: center;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-  background-color: #fff;
-  overflow: hidden;
-  transition: all 0.2s ease-in;
-  cursor: pointer;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 10px;  
+  background-color: black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+ 
 }
 
-.card:hover {
-  box-shadow: 0px 4px 12px 2px rgba(0, 0, 0, 0.25);
-  transform: translateY(-6px);
+.card-img {
+  border-radius: 4px;
+  width: 100px;
+  height: 90px;
+  display: inline-block;
 }
 
-.card-detail {
-  padding: 12px 8px;
+.title-detail,
+.title-price {
+  font-size: 2rem;
+  text-align: center;
 }
 
-.description {
-  text-align: justify;
-  padding: 10;
-  margin-left: 5px;
-  margin-right: 5px;
+.title-stock,
+.title-weight,
+.title-height {
+  font-size: 1rem;
+}
+
+.descript {
+  font-size: 1rem;
 }
 
 .verMas,
 .btn-primary {
   border: none;
-  background-color: lightblue;
+  background-color: red;
   border-radius: 8px;
   padding: 4px;
   margin-top: 35px;
   text-decoration: none;
+}
+
+.cart-buttons {
+  display: flex;
+  gap: 5px;
 }

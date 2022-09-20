@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function ItemDetail({ data }) {
   const { addToCart, removeItem, clearCart } = useContext(cartContext);
   const [countItem, setCountItem] = useState(0);
-  console.log(data);
+
   function handleAdd(counter) {
     addToCart(data, counter);
     setCountItem(counter);
@@ -27,18 +27,20 @@ function ItemDetail({ data }) {
   }
 
   return (
-    <div className="card">
+    <div className="card-detail-container">
       <div className="card-img">
         <img src={data.img} alt="imagen" />
       </div>
       <div className="details">
-        <h2>{data.title}</h2>
-        <h3>$ {data.price}</h3>
-        <p className="description">{data.description}</p>
-        <p>STOCK: {data.stock}</p>
-        <p>PESO: {data.weight}</p>
-        <p>ALTURA: {data.size}</p>
+        <h2 className="title-detail">{data.title}</h2>
+        <h3 className="title-price">$ {data.price}</h3>
+        <p className="title-stock"> STOCK: {data.stock} </p>
+        <p className="title-weight">PESO: {data.weight}</p>
+        <p className="title-height">ALTURA: {data.size}</p>
+        <p className="descript">{data.description}</p>
+      </div>
 
+      <div className="detail-buttons">
         {data.stock && (
           <ItemCount
             initial={1}
@@ -46,20 +48,19 @@ function ItemDetail({ data }) {
             onAdd={(counter) => handleAdd(counter)}
           />
         )}
-
         {countItem > 0 && (
-          <>
+          <div className="cart-buttons">
             <button className="btn-primary" onClick={removeItemCart}>
-              Eliminar carrito
+              ELIMINAR CARRITO
             </button>
             <button className="btn-primary" onClick={clearItemCart}>
-              Eliminar todo
+              ELIMINAR TODO
             </button>
 
             <Link to="/Cart">
               <button className="btn-primary">IR AL CARRITO</button>
             </Link>
-          </>
+          </div>
         )}
       </div>
     </div>

@@ -21,7 +21,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Figura de acción articulada de uno de los villanos de Star Wars que cuenta con dos sables rojos removibles.",
     category: "star-wars",
   },
 
@@ -34,7 +34,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Figura del principal antagonista de esta saga. Articulada, con sable rojo y con su característico casco removible.",
     category: "star-wars",
   },
 
@@ -47,7 +47,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Uno de los personajes que más ha sorprendido a los fans. Totalmente articulado y con cada una de sus armas removibles, lo hacen una pieza única. Próximamente, podrás tenerlo junto a la figura de acción 'The Child' ",
     category: "star-wars",
   },
 
@@ -60,7 +60,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Sin dudas, esta figura de acción no puede faltar en tu colección. El gran Maestro Yoda, con baston removible y que puede ser reemplazado por su sable verde. May the Force be with you.",
     category: "star-wars",
   },
 
@@ -73,7 +73,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Inspirada en la última entrega diriga por Matt Reeves, esta figura de acción cuenta con los característicos accesorios del personaje: batarangs, bombas y máscara removible.",
     category: "di-ci",
   },
 
@@ -86,7 +86,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "¿Quién no quisiera tener a uno de los villanos más importante de la historia en su collección? Esta figura del Joker cumple con todos los detalles que se merece. ",
     category: "di-ci",
   },
 
@@ -99,7 +99,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "The Flash en su figura de acción, propiamente dicho. El héroe más rápido de DC puede ser parte de tu colleción.",
     category: "di-ci",
   },
 
@@ -112,7 +112,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Sin dudas, uno de los héroes que más ha crecido estos últimos años gracias a la creación del multiverso. En este caso, te ofrecemos al arácnido protagonizado por Tom Holland, quien supo adaptar la nanotecnología en su traje.",
     category: "marvel",
   },
 
@@ -125,7 +125,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "El Dios del Trueno viene con su martillo y capa removible. Uno de los héroes más aclamados de las entregas de Advengers.",
     category: "marvel",
   },
   {
@@ -137,7 +137,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Fuerza, resistencia, agilidad y reflejos sobrehumanos. Francotirador, espadachín, experto en artes marciales y explosivos. ¿Dudas en sumarlo a tu colección?",
     category: "marvel",
   },
 
@@ -150,7 +150,7 @@ const dataItems = [
     size: "16 centímetros",
     weight: "300 gramos",
     description:
-      "Esta figura de acción incluye casco removible, blaster y jetpack. Basada en el personaje de la serie STAR WARS: THE BOOK OF BOBA FETT",
+      "Niveles sobrehumanos de fuerza, resistencia,y durabilidad física, así como vuelo, un precognitivo sexto sentido limitado son los poderes de esta gran heroína",
     category: "marvel",
   },
 
@@ -163,7 +163,7 @@ const dataItems = [
     size: "19 centímetros",
     weight: "250 gramos",
     description:
-      "Figura de acción de uno de los personajes principales de esta serie, Daryl Dixon. Incluye bayesta con sus respectivas flechas y poncho removible",
+      "Para arrancar con las nuevas figura de acción de la aclamada serie 'The Walking Dead, te presentamos a Daryl Dixon, figura articulada que cuenta con poncho y ballesta removibles",
     category: "twd",
   },
 ];

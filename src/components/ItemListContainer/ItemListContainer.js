@@ -43,7 +43,13 @@ function ItemListContainer({ greeting = "TODAS NUESTRAS FIGURAS DE ACCIÓN" }) {
     }
   }, [idCategory]);
 
-  console.log(data);
+if(data.length === 0){
+  return(
+    <div className="lds-dual-ring">
+      
+    </div>
+  )
+}
   return (
     <div className="container">
       <h2>{greeting}</h2>

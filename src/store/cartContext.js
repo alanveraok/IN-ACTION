@@ -14,12 +14,12 @@ export function CartProvider({ children }) {
       const dataId = findItemData(data.id);
       dataId.counter += counter;
       setCart(copyCart);
-      console.log(copyCart);
+  
     } else {
-      debugger;
+    
       copyCart.push({ ...data, counter });
       setCart(copyCart);
-      console.log(copyCart);
+     
     }
   }
 
@@ -37,15 +37,15 @@ export function CartProvider({ children }) {
   function removeItem(data) {
     const removedItem = findItemData(data.id);
     const findIndex = copyCart.indexOf(removedItem);
-    copyCart.splice(findIndex, 1);
+    copyCart.splice(findIndex -1 , 1);
     setCart(copyCart);
-    console.log(copyCart);
+
   }
 
   function clearCart() {
     copyCart = [];
     setCart(copyCart);
-    console.log(copyCart);
+
   }
 
   // suma de los precios
