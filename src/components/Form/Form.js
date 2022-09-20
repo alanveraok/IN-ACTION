@@ -4,17 +4,17 @@ import { cartContext } from "../../store/cartContext";
 import { collection, addDoc } from "firebase/firestore";
 import { useContext } from "react";
 import firestoreDB from "../../services/firebase";
-import { useNavigate } from "react-router-dom";
+
 
 function Form() {
   const { cart, total, clearCart } = useContext(cartContext);
   const [pucharserData, setPurchaserData] = useState({
-    name: "",
+    nombre: "",
     email: "",
     telefono: "",
   });
 
-  let navigate = useNavigate();
+
   const [purchaseFirebase, setPurchaseFirebase] = useState({
     id: "",
     complete: false,

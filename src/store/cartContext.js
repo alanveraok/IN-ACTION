@@ -62,7 +62,7 @@ export function CartProvider({ children }) {
     setQuantity(newQuantity);
   }, [cart]);
 
-  /*suma de productos*/
+
 
   return (
     <cartContext.Provider
@@ -72,5 +72,5 @@ export function CartProvider({ children }) {
     </cartContext.Provider>
   );
 
-  /*agregar las functions necesarias en value*/
+  
 }

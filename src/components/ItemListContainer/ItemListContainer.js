@@ -1,13 +1,12 @@
 import "./ItemListContainer.css";
-import ClickCount from "../ItemCount/ItemCount";
-import ItemCount from "../ItemCount/ItemCount";
+
 import React, { useEffect, useState } from "react";
-import dataItems from "../Data/Data";
+
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { Ring } from "@uiball/loaders";
 
-import firestoreDB from "../../services/firebase";
+
+
 
 import {
   collection,
