@@ -26,12 +26,12 @@ export function CartProvider({ children }) {
   function isInCart(id) {
     return copyCart.some(
       (itemInCart) => itemInCart.id === Number(id)
-    ); /*listo*/
+    ); 
   }
 
   function findItemData(id) {
     return copyCart.find((item) => item.id === Number(id));
-    /*usar FIND*/
+   
   }
 
   function removeItem(data) {
@@ -62,7 +62,7 @@ export function CartProvider({ children }) {
     setQuantity(newQuantity);
   }, [cart]);
 
-
+  
 
   return (
     <cartContext.Provider
