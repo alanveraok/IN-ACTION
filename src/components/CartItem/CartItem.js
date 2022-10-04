@@ -8,7 +8,7 @@ import { cartContext } from "../../store/cartContext";
 function CartItem({ data }) {
   const { removeItem, clearCart } = useContext(cartContext);
 
-  function removeItemCart(data) {
+  function removeItemCart() {
     removeItem(data);
   }
 
@@ -29,7 +29,7 @@ function CartItem({ data }) {
           <p>CANTIDAD: {data.counter}</p>
 
           <button className="btn-primary" onClick={removeItemCart}>
-            ELIMINAR CARRITO
+            ELIMINAR DEL CARRITO
           </button>
           <button className="btn-primary" onClick={clearItemCart}>
             ELIMINTAR TODO

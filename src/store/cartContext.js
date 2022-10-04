@@ -14,38 +14,31 @@ export function CartProvider({ children }) {
       const dataId = findItemData(data.id);
       dataId.counter += counter;
       setCart(copyCart);
-  
     } else {
-    
       copyCart.push({ ...data, counter });
       setCart(copyCart);
-     
     }
   }
 
   function isInCart(id) {
-    return copyCart.some(
-      (itemInCart) => itemInCart.id === Number(id)
-    ); 
+    return copyCart.some((itemInCart) => itemInCart.id === Number(id));
   }
 
   function findItemData(id) {
     return copyCart.find((item) => item.id === Number(id));
-   
   }
 
   function removeItem(data) {
-    const removedItem = findItemData(data.id);
-    const findIndex = copyCart.indexOf(removedItem);
-    copyCart.splice(findIndex -1 , 1);
-    setCart(copyCart);
+    copyCart = copyCart.filter((item)=>{
+      return item.id !== data.id
 
+    })
+    setCart(copyCart);
   }
 
   function clearCart() {
     copyCart = [];
     setCart(copyCart);
-
   }
 
   // suma de los precios
@@ -62,8 +55,6 @@ export function CartProvider({ children }) {
     setQuantity(newQuantity);
   }, [cart]);
 
-  
-
   return (
     <cartContext.Provider
       value={{ cart, addToCart, removeItem, clearCart, total, quantity }}
@@ -71,6 +62,4 @@ export function CartProvider({ children }) {
       {children}
     </cartContext.Provider>
   );
-
-  
 }
